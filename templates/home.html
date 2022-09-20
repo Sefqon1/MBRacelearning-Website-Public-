@@ -1,0 +1,425 @@
+<!--Homepage-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>MBRace-learning</title>
+    <link rel="shortcut icon" href="{%  static 'img/favicon.jpg' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  </head>
+
+  <!--Actual Website-->
+  <!--Navbar-->
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+    <div class="container">
+      <a href="#home" class="navbar-brand">
+        <img src="/static/img/Logo2.png" width="50" height="50" alt="">
+        <h3 class="d-inline align-middle" style="font-family: cursive;"> English Tutoring</h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#home-section" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services-head-section" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#prices-head-section" class="nav-link">Prices</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-head-section" class="nav-link">About me</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'blog' %}" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Home Section-->
+  <header id="home-section" style="position: relative;">
+    <div class="dark-overlay">
+      <div class="home-inner container">
+            <h1 class="display-4 text-light text-center text-capitalize font-weight-bolder ">MBRacelearning </h1>
+            <h3 class="display-4 text-light text-center">Private English tutoring by Morgan B. Randle</h3>
+          </div>  
+        </div>
+        <div class="custom-shape-divider-bottom-1608969436">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" class="shape-fill"></path>
+          </svg>
+      </div>
+  </header>
+
+<!--Services Head-->
+<section id="services-head-section" style="position: relative;">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-5">
+        <h1 class="display-4">Services</h1>
+        <div class="lead">    
+          <i class="fas fa-user-tie"></i>
+          <i class="fas fa-chalkboard"></i>
+          <i class="fas fa-edit"></i></div>
+      </div>
+      <div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!--Services-->
+<section id="services-section" class="py-5" style="position:relative">
+  <div class="container">
+
+    <div class="card text-center">
+      <div class="card-header">
+        About
+      </div>
+      <div class="card-body py-1">
+        <h5 class="card-title"></h5>
+        <p class="card-text py-1"> I provide private lessons aimed to develop your speaking, listening, reading and writing skills. I teach/ tutor level A2-C2. My teaching style is relaxed and casual. I like to create an environment where my students feel comfortable speaking and expressing their ideas. I create unique and personalized lessons that best fit your learning needs. <br>
+
+          I offer Business English, General English tutoring and Editing services.<br><br> <strong>Click below to learn more!</strong>
+           </p>
+    </div> 
+    </div>
+
+      <div class="card-deck py-4">
+
+                        <!-- Business English -->
+
+        <div class="card border-success mb-3" style="max-width: 25rem;">
+          <div class="card-header text-center"><h4>Business English</h4></div>
+          <div class="card-body d-flex flex-column text-secondary">
+            <h6 class="card-text py-1">Are you looking to get the job? Or advance your career? 
+              <br>Business English can be challenging.  My Business English courses will help you prepare for your dream job, workplace etiquette, and confidence building.</h6>
+            <a class="btn mt-auto text-center btn-primary" data-toggle="collapse" href="#collapseBusiness" role="button" aria-expanded="false" aria-controls="collapseBusiness"><strong>
+                List of services</strong>
+              </a>
+            <div class="collapse" id="collapseBusiness">
+              <div class="card-footer border-dark">
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-address-card"></i></span>Resume/ CV building</li>
+                  <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span> Writing a cover letter</li>
+                  <li><span class="fa-li"><i class="fas fa-chart-line"></i></span>Creating and delivering presentations</li>
+                  <li><span class="fa-li"><i class="fas fa-comments"></i></span>Small talk etiquette </li>
+                  <li><span class="fa-li"><i class="fas fa-envelope"></i></span>Writing formal emails, letters and inquiries </li>
+                  <li><span class="fa-li"><i class="fas fa-language"></i></span>Business vocabulary</li>
+                </ul>
+              </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- General English Tutoring -->
+        <div class="card border-info mb-3" style="max-width: 25rem;">
+          <div class="card-header text-center"><h4>General English tutoring</h4></div>
+          <div class="card-body d-flex flex-column text-secondary">
+          <h6 class="card-text"> Do you want to improve your conversations? Improve vocabulary? Learn more about the English language? This course will be 100% focused on your language goals.</h6>
+
+            <a class="btn mt-auto text-center btn-primary" data-toggle="collapse" href="#collapseTutoring" role="button" aria-expanded="false" aria-controls="collapseTutoring"><strong>
+              List of services</strong></a>
+              <div class="collapse" id="collapseTutoring">
+                <div class="card-footer border-dark">
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-universal-access"></i></span>Personalized lesson </li>
+                    <li><span class="fa-li"><i class="far fa-file-alt"></i></span>Homework assistance</li>
+                    <li><span class="fa-li"><i class="fas fa-chalkboard-teacher"></i></span>Grammar</li>
+                    <li><span class="fa-li"><i class="fas fa5-school"></i></span>Reading, writing, listening and speaking practice</li>                
+                    <li><span class="fa-li"><i class="fas fa-school"></i></span>Conversation practice
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+
+        <!-- Editing -->
+
+        <div class="card border-secondary mb-3" style="max-width: 25rem;">
+          <div class="card-header text-center"><h4>Editing</h4></div>
+          <div class="card-body d-flex flex-column text-secondary">
+            <h6 class="card-text">
+              If you’re staring at the page, let me help!<br>
+              Having a fresh pair of eyes to look over your writing is the key to success. My editing services ensure your writing is correct in both grammar and content.
+              </h6>
+ 
+              <a class="btn mt-auto text-center btn-primary" data-toggle="collapse" href="#collapseEditing" role="button" aria-expanded="false" aria-controls="collapseEditing"><strong>
+                List of services</strong>
+              </a>
+
+                <div class="collapse" id="collapseEditing">
+                  <div class="card-footer border-dark">
+                    <ul class="fa-ul">
+                      <li><span class="fa-li"><i class="fas fa-file-alt"></i></span>Resume/ CV & cover letter revision</li>
+                      <li><span class="fa-li"><i class="fas fa-book"></i></span>Brainstorming/ drafting essays</li>
+                      <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>Editing (content editing, sentence editing, flagging inconsistencies, etc.)</li>
+                      <li><span class="fa-li"><i class="fas fa-tasks"></i></span>Proofreading (grammar, spelling and punctuation mistakes)</li>
+                    </ul>
+                  </div>
+                </div>                          
+            </div>
+          </div>
+
+          
+
+        </div>
+</div>
+<div class="custom-shape-divider-bottom-1608970274">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+
+</section>
+
+<!--Prices head-->
+<section id="prices-head-section">
+  <div class="container">
+    <div class="row">
+      <div class="col text-light text-center py-5">
+        <h1 class="display-4">Prices</h1>
+        <p class="lead">
+          The first trial lesson is free of charge! (30 minutes)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Prices-->
+<section id="services-section" class="py-5">
+  <div class="container">
+    <table class="table table-hover">
+      <thead class="thead" id="prices-table-head">
+        <tr>
+          <th class="text-light"  scope="col">Business English & General English</th>
+          <th style="text-align: start;" class="text-light" scope="col">Tutoring & homework help</th>
+          <th class="text-light" scope="col">Editing, proofreading and brainstorming service</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">
+            <strong>Single lesson</strong>
+            <br>45, 60, 90 minutes
+            <br>
+            <br>Prices starting at <strong>$30</strong>
+          </td>
+          <td>
+            <strong>Single lesson</strong>
+            <br>45, 60, 90 minutes
+            <br>
+            <br>Prices starting at <strong>$15</strong>
+          </td>
+          <td>
+            <br>
+          </td>
+        </tr>
+          <td scope="row">
+            <strong>Package deals: Book your lessons in bulk and save</strong>
+            <br>5 lessons
+            <br>10 lessons
+            <br>15 lessons
+            <br><br><strong><a href="{% url 'contact' %}" class="nav-link">Contact</a> for price inquiry</strong>
+          </td>
+          <td>
+            <strong>Package deals: Book your lessons in bulk and save</strong>
+            <br>5 lessons
+            <br>10 lessons
+            <br>15 lessons
+            <br><br><strong><a href="{% url 'contact' %}" class="nav-link">Contact</a> for price inquiry</strong>
+          </td>
+          <td>
+            <br><br><br><br><br><br><br><strong><a href="{% url 'contact' %}" class="nav-link">Contact</a> for price inquiry</strong>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</body>
+
+<!-- About me Head  -->
+<section id="about-head-section" style="position: relative;">
+  <div class="custom-shape-divider-top-1608967701">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-5">
+        <h1 class="display-4">About Me</h1>
+        <p class="lead">
+          Hi, I'm Morgan! I am originally from the United States. I recently moved from Germany to Vietnam. I have always had a passion for travelling and learning new languages. At 26, I quit my corporate job and decided to follow my dreams and become an English teacher and start my own teaching business. <br><br><strong>If you want to follow my journey in Vietnam and learn more about me you can visit my blog!</strong> 
+        </p>
+        <a href="{% url 'blog' %}" id="bloglinkbutton" class="btn btn-info " role="button">Click here!</a>
+    </div>
+  </div>
+</section>
+
+<!-- About section -->
+<section id="about-section" class="py-5" style="position:relative;">
+  <div class="custom-shape-divider-top-1608967446">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="/static/img/morgan.jpg"
+          alt=""
+          class="img-fluid mb-3 rounded-circle py-2"
+        />
+      </div>
+      <div class="col-md-6">
+        <h3>Experience:</h3>
+        <p>
+          I am a CELTA certified English teacher and tutor. I currently teach very young learners, teenagers and IELTS exam preparation at a language center in Hanoi. I have experience studying many languages. I have learned Spanish, German, Russian, French in school and self-taught.
+          <br>
+          The majority of my working experience is in business management, hospitality and customer service. It has taught me to be culturally sensitive, passionate, patient and adaptable.
+          
+        </p>
+        <div class="d-flex">
+          <div class="p-4 align-self-start">
+            <i class="fas fa-university fa-2x"></i>
+          </div>
+          <div class="p-4 align-self-end">
+            <strong>Education:</strong>
+            <br> I received my CELTA from Cambridge University, English Assessment in October 2020. In 2016, I graduated with my Bachelor’s degree in International Studies with a minor in linguistic anthropology from Virginia Commonwealth University. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer-->
+<footer id="main-footer" class="text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-4">
+        <img src="/static/img/Logo2.png" width="100" height="100"  alt="" class="img-fluid">        <h3>English Tutoring</h3>
+        <p>Copyright &copy; <span id="year"></span></p>
+        <a href="{% url 'impressum' %}">Impressum</a> | <a href="{% url 'datenschutz' %}">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+  integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"
+></script>
+
+<script>
+
+  
+  // Get the current year for the copyright\\
+
+  $("#year").text(new Date().getFullYear());
+
+  //init Scrollspy
+  $('body').scrollspy({target: '#main-nav'});
+
+  // Smooth Scrolling
+  $("#main-nav a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      const hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+
+        window.location.hash = hash;
+      });
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//www.privacypolicies.com/public/cookie-consent/3.1.0/cookie-consent.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"dark","language":"en","website_name":"MBR - English Tutoring","change_preferences_selector":"Change my preferences"});
+});
+</script>
+<script>
+  $('body').scrollspy({target: '#main-nav'});
+<script type="text/plain" cookie-consent="functionality">
+  $("#main-nav a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      const hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop} $(hash).offset().top
+      }, 800, function () {
+
+        window.location.hash = hash;
+      });
+    }
+  });
+  </script>
+</script>
+</script>
+
+<script type="text/plain" cookie-consent="functionality">
+$("#year").text(new Date().getFullYear());
+</script>
+
+
+<noscript>Cookie Consent by <a href="https://www.PrivacyPolicies.com/cookie-consent/" rel="nofollow noopener">PrivacyPolicies.com</a></noscript>
+
+</script>
+
+</body>
+</html>

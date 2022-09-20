@@ -1,0 +1,96 @@
+{% load embed_video_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Blog</title>
+    <link rel="shortcut icon" href="{%  static 'img/favicon.jpg' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- START HERE -->
+
+    <body data-spy="scroll" data-target="#main-nav" id="home">
+      <nav
+        class="navbar navbar-expand-md navbar-light fixed-top py-4"
+        id="main-nav"
+      >
+        <div class="container">
+          <a href="{% url 'home' %}" class="navbar-brand">
+            <img src="/static/img/Logo2.png" width="50" height="50" alt="" />
+            <h3 class="d-inline align-middle">English Tutoring-Blog</h3>
+          </a>
+          <button
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">About me</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'blog' %}" class="nav-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="">
+          {% block content %}
+          <h1 class="mt-4 py-4">{{ post.title }}</h1>
+
+          <p class="lead">by {{ object.author }}</p>
+          <hr />
+          <p class="text-muted">Posted {{ object.date }}</p>
+          <hr />
+          {% if object.cover %}
+          <img
+            class="blogpostimage img-fluid img-thumbnail rounded"
+            src="{{ object.cover.url }}"
+            alt="Responsive image"
+          />
+          {% endif %} {% if object.video %}
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="{{ object.video }}"
+              allowfullscreen
+            ></iframe>
+          </div>
+          {% endif %}
+          <hr />
+          <p class="lead">{{ object.body}}</p>
+
+          {% endblock content %}
+        </div>
+      </div>
+    </body>
+  </body>
+</html>

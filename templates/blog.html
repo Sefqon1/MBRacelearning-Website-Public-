@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>Blog</title>
+  <link rel="shortcut icon" href="{%  static 'img/favicon.jpg' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- START HERE -->
+
+  <body data-spy="scroll" data-target="#main-nav" id="home">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+      <div class="container">
+        <a href="{% url 'blog' %}" class="navbar-brand">
+          <img src="/static/img/Logo2.png" width="50" height="50" alt="">
+          <h3 class="d-inline align-middle"style="font-family: cursive;">Morgans Blog</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'home' %}" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'home' %}" class="nav-link">Prices</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'home' %}" class="nav-link">About me</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'home' %}" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'blog' %}" class="nav-link">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="showcase">
+      <div id="myCarousel" class="carousel slide py-1" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-image-1 active">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-left mb-5">
+                <h1 class="display-3">Heading One</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="carousel-item carousel-image-2">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                <h1 class="display-3">Heading Two</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="carousel-item carousel-image-3">
+            <div class="container">
+              <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                <h1 class="display-3">Heading Three</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, aperiam vel ullam deleniti reiciendis ratione
+                  quod aliquid inventore vero perspiciatis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+  
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8"> 
+        {% block content %}
+        {% for post in object_list %}
+
+        <div class="card mb-4 bloglistcard">
+          {% if post.cover %}
+          <img class="card-img-top img-fluid" src="{{ post.cover.url }}" alt="Card image cap">
+          {% else %}
+          <img class="card-img-top img-fluid" src="/static/img/Logo2.png" alt="Card image cap">
+          {% endif %}
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.introtext }}</p>
+            <a href="{% url 'blogpost' post.pk %}" class="btn bloglistbutton">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ post.date }}, 2020 by {{ post.author }} | {{ post.tag }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+              <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+              <a class="btn btn-outline-info mb-4" href="{{ page.obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+              {% if page_obj.number == num %}
+                <a class="btn btn-info mb-4" href="?page={{ num}}">{{ num }}</a>
+              {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+              <a class="btn btn-outline-info mb-4" href="?page={{ num}}">{{ num }}</a>
+              {% endif %}
+            {% endfor %}
+            
+            {% if page_obj.has_next %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.numb_pages }}">Last</a>
+            {% endif %}                                  
+          {% endif %}
+          {% endblock content %}
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+          </div>
+        </div>
+      </div>
+
+
+
+<footer id="main-footer" class="text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-4">
+        <img src="/static/img/Logo2.png" width="100" height="100"  alt="" class="img-fluid">        <h3>English Tutoring</h3>
+        <p>Copyright &copy; <span id="year"></span></p>
+        <a href="{% url 'impressum' %}">Impressum</a> | <a href="{% url 'datenschutz' %}">Datenschutz</a>
+      </div>
+    </div> 
+  </div>
+</footer>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+  </script>
+</body>
+
+</html>

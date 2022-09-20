@@ -1,0 +1,341 @@
+body {
+  background: #eeeeee;
+  color: #393e46;
+  margin-top: 105px;
+  padding-bottom: 20px;
+}
+
+/*Navbar */
+.navbar {
+  box-shadow: 2px 2px 5px #76ead7;
+  opacity: 0.9;
+  background: #fff;
+}
+
+.navbar .nav-item {
+  font-size: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+/*Home section*/
+#home-section {
+  background: url(../img/books.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  min-height: inherit;
+  background: rgba(57, 62, 70, 0.5);
+}
+
+#home-section .home-inner {
+  padding-top: 150px;
+}
+
+/*Shape at bottom of home */
+.custom-shape-divider-bottom-1608969436 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  /*transform: rotate(180deg);*/
+}
+
+.custom-shape-divider-bottom-1608969436 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 55px;
+}
+
+.custom-shape-divider-bottom-1608969436 .shape-fill {
+  fill: #76EAD7;
+}
+
+
+/*Services section*/
+
+#services-head-section {
+  background: #76EAD7;
+}
+
+
+
+
+#services-section {
+  background: #eeeeee;
+}
+
+/* shape at bottom of services*/
+.custom-shape-divider-bottom-1608970274 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1608970274 svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 25px;
+}
+
+.custom-shape-divider-bottom-1608970274 .shape-fill {
+    fill: #393E46;
+}
+
+/*Prices section*/
+
+#prices-head-section {
+  background: #393e46;
+}
+
+#prices-table-head {
+  background: #393e46;
+  text-decoration-color: #fff;
+}
+
+/*Waveshape at bottom of prices section*/
+
+.custom-shape-divider-top-1608967701 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1608967701 svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 97px;
+}
+
+.custom-shape-divider-top-1608967701 .shape-fill {
+  fill: #EEEEEE;
+}
+
+
+
+#about-head-section {
+  background: #76ead7;
+}
+
+/*Waveshape at top of about section*/
+
+.custom-shape-divider-top-1608967446 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1608967446 svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 97px;
+}
+
+.custom-shape-divider-top-1608967446 .shape-fill {
+  fill: #76EAD7;
+}
+
+#main-footer {
+  background: #393e46;
+  margin-bottom: 0;
+}
+
+/*Contact page */
+
+#home-section-contact {
+  background: url(../img/applebooks.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 80vh;
+}
+
+#home-section-contact .dark-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background: rgba(57, 62, 70, 0.5);
+}
+
+#home-section-contact .contact-inner {
+  padding-top: 40px;
+}
+
+#contactform {
+  background: rgba(57, 62, 70, 0.9);
+  margin: auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+#contactformbutton {
+  background-color: #76ead7;
+  color: #393e46;
+  font-weight: bold;
+}
+
+#contactformheading {
+  text-decoration: underline;
+  text-decoration-color: #76ead7;
+}
+
+.specialcard {
+  opacity: 0.1;
+}
+
+.card {
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+}
+
+/* contact form success modal */
+
+{
+	font-family: 'Varela Round', sans-serif;
+}
+.modal-confirm {		
+	color: #636363;
+	width: 325px;
+	font-size: 14px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #76ead7;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm.modal-dialog {
+	margin-top: 80px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #76ead7;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+	background: #76ead7;
+	outline: none;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+/*Blog page */
+
+.carousel-item {
+  height: 55vh;
+}
+
+.carousel-image-1 {
+  background: url("../img/thailandresized/img1.jpg");
+  background-size: cover;
+}
+
+.carousel-image-2 {
+  background: url("../img/thailandresized/img2.jpg");
+  background-size: cover;
+}
+
+.carousel-image-3 {
+  background: url("../img/thailandresized/img3.jpg");
+  background-size: cover;
+}
+
+.bloglistcard {
+  width: 100%;
+  object-fit: cover;
+  border-color: #76ead7;
+}
+
+.bloglistbutton {
+  background-color: #76ead7;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.blogcontainer {
+  width: 150%;
+}
+
+.services-headings {
+  font-weight: bold;
+  text-decoration: underline;
+}
